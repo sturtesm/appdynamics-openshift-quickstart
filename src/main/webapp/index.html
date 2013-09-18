@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Welcome to OpenShift</title>
+  <style>
+  html { 
+  background: black; 
+  }
+  body {
+    background: #333;
+    background: -webkit-linear-gradient(top, black, #666);
+    background: -o-linear-gradient(top, black, #666);
+    background: -moz-linear-gradient(top, black, #666);
+    background: linear-gradient(top, black, #666);
+    color: white;
+    font-family: "Helvetica Neue",Helvetica,"Liberation Sans",Arial,sans-serif;
+    width: 40em;
+    margin: 0 auto;
+    padding: 3em;
+  }
+  a {
+    color: white;
+  }
+
+  h1 {
+    text-transform: capitalize;
+    -moz-text-shadow: -1px -1px 0 black;
+    -webkit-text-shadow: 2px 2px 2px black;
+    text-shadow: -1px -1px 0 black;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5);
+    background: #CC0000;
+    width: 22.5em;
+    margin: 1em -2em;
+    padding: .3em 0 .3em 1.5em;
+    position: relative;
+  }
+  h1:before {
+    content: '';
+    width: 0;
+    height: 0;
+    border: .5em solid #91010B;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    position: absolute;
+    bottom: -1em;
+    left: 0;
+    z-index: -1000;
+  }
+  h1:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border: .5em solid #91010B;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    position: absolute;
+    bottom: -1em;
+    right: 0;
+    z-index: -1000;
+  }
+  h2 { 
+    margin: 2em 0 .5em;
+    border-bottom: 1px solid #999;
+  }
+
+  pre {
+    background: black;
+    padding: 1em 0 0;
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    border-radius: 1em;
+    color: #9cf;
+  }
+
+  ul { 
+    margin: 0; 
+    padding: 0;
+  }
+  li {
+    list-style-type: none;
+    padding: .5em 0;
+  }
+
+  .brand {
+    display: block;
+    text-decoration: none;
+  }
+  .brand .brand-image {
+    float: left;
+    border: none;
+  }
+  .brand .brand-text {
+    float: left;
+    font-size: 24px;
+    line-height: 24px;
+    padding: 4px 0;
+    color: white;
+    text-transform: uppercase;
+  }
+  .brand:hover,
+  .brand:active {
+    text-decoration: underline;
+  }
+
+  .brand:before,
+  .brand:after {
+    content: ' ';
+    display: table;
+  }
+  .brand:after {
+    clear: both;
+  }
+  </style>
+</head>
+<body>
+  <a href="http://openshift.com" class="brand">
+    <img class="brand-image"
+      alt="OpenShift logo"
+      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAgCAYAAABU1PscAAAAAXNSR0IArs4c6QAAAAZiS0dEAAAAAAAA+UO7fwAAAAlwSFlzAAARHgAAER4B27UUrQAABUhJREFUWMPFWFlsVGUU/s5/70zbaSltA7RQpJ2lC9CFkQkWIgSJxkAhRA0JCYFq4hPG6JsoGKNCtPigxqhvGlPAuGIaE4igNaElbIW2yNL2tkOtTYGWCqWF2e79fCh7p1Bmpnge/3vuOef7z/nPJiTxMHS6pMRuu6YqFNTTAJYSyAU4GZB0AH2AGCANAfc5Qrba6T3HrmECScYLwCioSIcV2AjidQDZ45Q/LJRaWrLV03X89P8GwHB5XwG4DcDkGPWEBKimNrzN094efGQAzjm9GWHFr4R4LiHKgFaSL3r8zYcmHEBbkW+KFo7UEyhKsNeHlMgyV8eJo4kQpqId9ub6HCoc+XWcxl8lcBTATwDax8GfZtHa054/f/bNg8ZcnyOhHjBc834E8MJ9/vML8aYZQX1hd1PP3WFXkhMRfYkIlpOoGomc0WRRTnch+XAQWG2KTNJNLbuy68C/cQMwXOWrAKkdgz8A8kMdg9X5fn/gQcI7POXLaMk3AGbe/P8SbF0D1KcGRGXpIJJpIQkWBHhnsf/Ie3GF0DmnMxmQT8bg7RellXr8ze+Ox3gAcBvNf+iUUhH5FODLSvScAerDGpiVxTAyGUYKzICA34nCwbhDyHB7N4L8PAofhVzh9jfvjffR/ZZTnupIsR8G0C9EjW7Tfnii/dBgrPL0u83kmjHy33Z3Z/zG97uKi7xpWA8GHZpE1mcZRne8MvXblfbxqQAWR+Fp+mdW5hZPjAqu5JVlhrTwOgrXi2ABbjjchF4FYGvi0qhprgagjYod4OeldXWRWBUEtdBjEH4mwIJ7vF2V4Dqgot0+NEFdPAqmdZ5tAXA8Slx6LrpKsxMHQJge5ft1v0oe2OOu+PZ39+LCOFqImqiXo8JzAeBkXlnmnoKK9LgACJl2R9gELsHW1saUwKCpnbIoa8UMTokVgGXJmSjHkfNWUlWDy9d6USVdyoiEF8b1iElxQKHuPG1D/bCtVEBhCiykMQQFgCK2mN2sSx+tkdcbhGq7wKSkK9RnmsCG2xVSLsflAR1S6eloWhawtF8yGJGskSJDBdQR8pIjZMXcfFmm1gOg2lRaSRdT1AD1PBPQbCAyxcRMifCpc41HEtILNbh9s8SSvYTUmBp2LDGOdCOB1OD0XbeByWliwY5bugc9nU2T4wqhCx7PNAV9bSGwARp3TzVaP0j09GQUzJubLUgefY3SEHMh63MVr4FIlYL+7C1AlCwAmxM+/plYy6hhgN2xp1HBawAr72krnH3uoicTaXyHx7uIwKZoT0QhUhszAAI7x7ivL0a60/jp77yyTFrWt6N6rxE99c7OkxdiBhC2y/cAorXHpama/aNG8dkOO32b6p3zTzXmeysfPu4LkkKafA3IrGjfCfPtuGfiPlfx+xBsuWtwpa3zIuy2YaoZ5o0eSQc5TVnb53aeeAuk9eBtRvkqUH0MoTsqA7nL429eFzeA3lyfQ08eaiNgCrjTYNozQ1S+WyUfQCosTLqZ+oiDUNwhggPujpZTuCMXGwUV6cJgKYnNIJffR3df2NLLZ5871puQrUR//pzpU7rOnAfJP53eDELrsoPpk4RIGRn5xqIBAAdBOCAoBjBjPJsJUdZSt9HSOGFrld5cn2M4KbwfkIUJzqYhQlYWdJ7YN2FrFQCY3nPsmk61AuSuRNYyUdaiRBk/7tViR37Zcir1JYC8WNshgjWWPfhq0dmzVx/5bhQAWnLKU1Md8gZHOsjxAgmD2GEKq4s6m1sxASQPu16HiBh53goqPg9ac0TEcwNQEOBlQAZEcMgC94dDZt2c7r8GMIH0H43ZRDC51RVCAAAAAElFTkSuQmCC">
+    <div class="brand-text"><strong>Open</strong>Shift</div>
+  </a>
+  
+  <a href="http://www.appdynamics.com" class="brand">
+    <img class="brand-image"
+      alt="AppDynamics logo"
+     src="data:image/png;base64,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" style="float: right" />
+  </a>
+  <h1>
+    Welcome to OpenShift - AppDynamics
+  </h1>
+  <h2>
+    Ensure you complete the following steps in order to integrate your application with AppDynamics.
+  </h2>
+  <p>
+    From your local git repository, update your controller-info.xml file located in AppServerAgent/conf to include your controller-host, account-name and account-access-key.  This information was located in your email after signing up for an AppDynamics account.  You may also specify application-name, tier-name and node-name in this file.  After updating these fields, run the following:
+  </p>
+  <pre>
+    git commit -a -m 'Some commit message'
+    git push
+  </pre>
+  <p>
+    Go to your controller-host and your application should be listed.
+  </p>
+  <p>See the README.md file in the application Git repository for more information on the options for deploying applications.</p>
+
+<h2>Debugging</h2>
+<p>View debugging information about the server environment including memory pools by loading this JSP page: <a href="snoop.jsp">Debug</a></p>
+
+  <h2>
+    What's next?
+  </h2>
+  <ul>
+    <li>
+      Why not visit us at <a href="http://www.openshift.com">http://www.openshift.com</a>, or
+    </li>
+    <li>
+      You could get help in the <a href="http://www.openshift.com/forums/openshift">OpenShift forums</a>, or
+    </li>
+    <li>
+      You're welcome to come chat with us in our IRC channel at #openshift on freenode.net
+    </li>
+  </ul>
+</body>
+</html>
