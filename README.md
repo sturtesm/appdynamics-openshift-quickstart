@@ -4,19 +4,19 @@
 
 * Create an OpenShift account: http://openshift.redhat.com
 * Set up your local machine with the client tools: https://www.openshift.com/developers/rhc-client-tools-install
-* Create a JBoss application (you can call your application whatever you want). 
+* Create a JBoss application (you can call your application whatever you want).
 
 ```
-   $ rhc app create appdynamicsdemo jbossews-2.0 --from-code https://github.com/Appdynamics/openshift-appdynamics-quickstart
+   $ rhc app create appdynamicsdemo jbossews-2.0 --from-code https://github.com/Appdynamics/appdynamics-openshift-quickstart.git
 ```
 
 ##Step 2. Sign up for AppDynamics by visiting the following web-page:
 
 https://portal.appdynamics.com/account/signup/signupForm/
 
-##Step 3. Log into your AppDynamics Controller 
+##Step 3. Log into your AppDynamics Controller
 
-Log in using your account details in your email titled "Welcome to your AppDynamics Pro SaaS Trial" 
+Log in using your account details in your email titled "Welcome to your AppDynamics Pro SaaS Trial"
 or the account details you have entered during On-Premise installation.
 
 ##Step 4.  Configure the AppDynamics agent (from your app's local git repo):
@@ -39,7 +39,7 @@ c. Change CONTROLLER_HOST, ACCOUNT_NAME and ACCOUNT_ACCESS_KEY to be your values
 	$ git push
 ```
 
-##Step 6. Visualize and start monitoring your app 
+##Step 6. Visualize and start monitoring your app
 
 Go to http://\<CONTROLLER_HOST\>[:\<CONTROLLER_PORT\>]/controller to see your application integrated.
 
